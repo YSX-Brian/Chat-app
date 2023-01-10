@@ -53,7 +53,8 @@ export default class Start extends React.Component {
             <TouchableOpacity
               onPress={() => this.props.navigation.navigate('Chat',
                 { name: this.state.name, background: this.state.background })}
-              style={styles.button}>
+              style={styles.button}
+              accessibilityLabel="Enter the chatroom">
               {/* transfer name and background color to the chat screen */}
               <Text style={styles.buttonText}>Start Chatting</Text>
             </TouchableOpacity>
