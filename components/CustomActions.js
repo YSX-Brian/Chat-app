@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import * as Permissions from 'expo-permissions';
 import * as ImagePicker from 'expo-image-picker';
 import * as Location from 'expo-location';
+import { connectActionSheet } from "@expo/react-native-action-sheet";
 import PropTypes from 'prop-types';
 
 const firebase = require('firebase');
@@ -80,18 +81,22 @@ export default class CustomActions extends React.Component {
   onActionPress = () => {
     const options = ['Choose From Library', 'Take Picture', 'Send Location', 'Cancel'];
     const cancelButtonIndex = options.length - 1;
-    this.context.actionSheet().showActionSheetWithOptions(
+    this.props.showActionSheetWithOptions(
       {
         options,
         cancelButtonIndex,
       },
+
       async (buttonIndex) => {
         switch (buttonIndex) {
           case 0:
+            console.log("user wants to pick an image");
             return this.imagePicker();
           case 1:
+            console.log("user wants to take a photo");
             return this.takePhoto();
           case 2:
+            console.log("user wants to get their location");
             return this.getLocation();
         }
       }
@@ -167,3 +172,5 @@ const styles = StyleSheet.create({
 CustomActions.contextTypes = {
   actionSheet: PropTypes.func,
 };
+
+CustomActions = connectActionSheet(CustomActions);
