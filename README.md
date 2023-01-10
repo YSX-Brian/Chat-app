@@ -37,23 +37,23 @@ Google Firebase
     "expo-image-picker": "~14.0.2"
 
 ### User Guide
-Install Expo CLI and download Expo Go, the mobile client app.  
+1. Install Expo CLI and download Expo Go, the mobile client app.  
 [Expo Installation Directions](https://docs.expo.dev/get-started/installation/#expo-cli)  
 
-Install Android Studio.   
+2. Install Android Studio.   
 [Android Studio Installation Directions](https://developer.android.com/studio/install)  
 
-Create or access your account on Google Firebase.   
+3. Create or access your account on Google Firebase.   
 [Google Firebase Main Page](https://firebase.google.com/)  
 
-Go to the console, create a new project, and start in test mode for the fastest setup. Follow instructions below for further setup.  
+4. Go to the console, create a new project, and start in test mode for the fastest setup. Follow instructions below for further setup.  
 [Installing the SDK and initializing Firebase](https://firebase.google.com/docs/web/setup)  
 
-Make sure to add your own `config` data from your own project (click the gear next to project overview, go to project settings, and scroll down to the SDK setup and configuration section).  
+5. Make sure to add your own `config` data from your own project (click the gear next to project overview, go to project settings, and scroll down to the SDK setup and configuration section).  
 
-Reference the collection in the same file.   
+6. Reference the collection in the same file.   
 `this.referenceMessages = firebase.firestore().collection('YOUR_PROJECT_NAME_HERE');`  
   
-Install all other project dependencies using Node Package Manager.  
+7. Install all other project dependencies using Node Package Manager.  
 
-Use `expo start` and follow the instructions to launch the app either on your phone or emulator.   
+8. Use `expo start` and follow the instructions to launch the app either on your phone or emulator.   
