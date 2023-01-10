@@ -52,7 +52,7 @@ Google Firebase
 5. Make sure to add your own `config` data from your own project (click the gear next to project overview, go to project settings, and scroll down to the SDK setup and configuration section).  
 
 6. Reference the collection in the same file.   
-`this.referenceMessages = firebase.firestore().collection('YOUR_PROJECT_NAME_HERE');`  
+`this.referenceMessages = firebase.firestore().collection('YOUR_COLLECTION_NAME_HERE');`  
   
 7. Install all other project dependencies using Node Package Manager.  
 
